@@ -1,14 +1,14 @@
 <!-- home -->
 <template>
-  <div class="index-container">
-    
-  </div>
+  <div class="index-container">Home</div>
 </template>
 
 <script>
 export default {
   data() {
-    return {}
+    return {
+      
+    }
   },
 
   computed: {},

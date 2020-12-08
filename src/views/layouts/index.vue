@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import TabBar from '@/components/TabBar'
 export default {
   name: 'AppLayout',
   data() {
@@ -20,12 +19,10 @@ export default {
     }
   },
   components: {
-    TabBar
+    
   },
   methods: {
-    handleChange(v) {
-      console.log('tab value:', v)
-    }
+
   }
 }
 </script>
