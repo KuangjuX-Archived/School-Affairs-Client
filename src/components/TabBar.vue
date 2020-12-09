@@ -18,7 +18,13 @@ export default {
     data: {
       type: Array,
       default: () => {
-        return []
+        return [
+          {
+            to: "/login",
+            icon: require('../assets/icon/home.svg'),
+            title: '登录'
+          },
+        ]
       }
     }
   },
