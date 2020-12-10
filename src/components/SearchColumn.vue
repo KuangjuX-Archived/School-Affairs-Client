@@ -49,6 +49,7 @@ button {
 input {
   width: 100%;
   height: 45px;
+  /* background: #8C9EFF; */
   /* padding-left: 0;
   padding-right: 46px; */
 }
@@ -60,10 +61,10 @@ button {
   position: absolute;
 }
 .bar1 input {
-  border: 1px solid #ffffff;
+  /* border: 1px solid #ffffff; */
   border: 0;
-  border-radius: 5px;
-  background: #ffffff;
+  /* border-radius: 5px; */
+  background: #8C9EFF;
   color: black;
   /* padding: 5px 10px; */
   line-height: 32px;
@@ -71,17 +72,17 @@ button {
 }
 .bar1 button {
   right: 0;
-  border-radius: 0 5px 5px 0;
+  /* border-radius: 0 5px 5px 0; */
   outline: none;
-  background: #005187;
+  background: #8C9EFF;
   /* background: #ffffff; */
 }
 .bar1 button::before {
   content: url("img/search.svg");
 }
 ::-webkit-input-placeholder {
-  color: black;
-  font-size: 10px;
+  color: #ffffff;
+  font-size: 13px;
 }
 .classification-list {
   position: absolute;
