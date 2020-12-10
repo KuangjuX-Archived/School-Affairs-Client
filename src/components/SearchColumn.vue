@@ -61,14 +61,12 @@ button {
   position: absolute;
 }
 .bar1 input {
-  /* border: 1px solid #ffffff; */
+  border: 1px solid #ffffff;
   border: 0;
   border-radius: 5px;
-  /* background: linear-gradient(#B388FF,#5C6BC0); */
   background: #3D5AFE;
   opacity: 0.5;
   color: black;
-  /* padding: 5px 10px; */
   line-height: 32px;
   font-size: 16px;
 }
@@ -76,13 +74,13 @@ button {
   right: 0;
   border-radius: 0 5px 5px 0;
   outline: none;
-  /* background: linear-gradient(#B388FF,#5C6BC0); */
-  /* background: #ffffff; */
   background: #3D5AFE;
   opacity: 0.5;
 }
 .bar1 button::before {
+  display: inline-block;
   content: url("img/search.svg");
+  margin-top: 8px;
 }
 ::-webkit-input-placeholder {
   color: #ffffff;
