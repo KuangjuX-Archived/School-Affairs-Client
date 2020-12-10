@@ -34,7 +34,7 @@ export default {
 
 .form {
   position: relative;
-  height: 45px;
+  height: 32px;
   padding: 0;
   width: 50wh;
 }
@@ -48,23 +48,25 @@ button {
 }
 input {
   width: 100%;
-  height: 45px;
+  height: 32px;
   /* background: #8C9EFF; */
   /* padding-left: 0;
   padding-right: 46px; */
 }
 
 button {
-  height: 45px;
-  width: 45px;
+  height: 32px;
+  width: 32px;
   cursor: pointer;
   position: absolute;
 }
 .bar1 input {
   /* border: 1px solid #ffffff; */
   border: 0;
-  /* border-radius: 5px; */
-  background: #8C9EFF;
+  border-radius: 5px;
+  /* background: linear-gradient(#B388FF,#5C6BC0); */
+  background: #3D5AFE;
+  opacity: 0.5;
   color: black;
   /* padding: 5px 10px; */
   line-height: 32px;
@@ -72,10 +74,12 @@ button {
 }
 .bar1 button {
   right: 0;
-  /* border-radius: 0 5px 5px 0; */
+  border-radius: 0 5px 5px 0;
   outline: none;
-  background: #8C9EFF;
+  /* background: linear-gradient(#B388FF,#5C6BC0); */
   /* background: #ffffff; */
+  background: #3D5AFE;
+  opacity: 0.5;
 }
 .bar1 button::before {
   content: url("img/search.svg");
@@ -83,23 +87,6 @@ button {
 ::-webkit-input-placeholder {
   color: #ffffff;
   font-size: 13px;
-}
-.classification-list {
-  position: absolute;
-  z-index: 1000;
-  width: 280px;
-  left: 20px;
-  overflow-y: scroll;
-}
-.classification-item {
-  color: #000000;
-  font-size: 15px;
-  font-weight: 500;
-}
-.classification-item:hover {
-  color: #42a5f5;
-  opacity: 0.7;
-  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   .form {
