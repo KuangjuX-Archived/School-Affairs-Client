@@ -28,7 +28,9 @@ export default {
       questions:[
               {
                 title: "身价大涨的方便面",
-                description: "大一食堂方便面4.5rmb \n 大三大概5.5 \n 今年6.5 \n 涨疯了"
+                description: "大一食堂方便面4.5rmb  大三大概5.5  今年6.5  涨疯了",
+                likes: 100,
+                comments: 100
               }
             ]
     }
