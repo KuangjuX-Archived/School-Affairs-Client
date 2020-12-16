@@ -38,7 +38,7 @@ export default {
     }
 
     .van-panel__header{
-        border-radius: 1em;
+        border-radius: 1em 1em 0 0;
     }
     .van-cell__title{
         font-size: 20px !important;

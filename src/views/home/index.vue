@@ -25,6 +25,7 @@ export default {
   
   data(){
     return {
+      // When finishing network request, you can convert the key of Object by Helper function
       questions:[
               {
                 title: "身价大涨的方便面",
