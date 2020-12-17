@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import TabBar from 'components/TabBar/TabBar'
-import NavBar from 'components/MyNavBar'
+import TabBar from 'components/Bar/TabBar'
+import NavBar from 'components/Bar/MyNavBar'
 import QuestionCard from 'components/Question/QuestionCard'
-import LabelBar from 'components/TabBar/LabelBar'
+import LabelBar from 'components/Bar/LabelBar'
 
 export default {
   components: {
