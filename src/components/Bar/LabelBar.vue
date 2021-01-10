@@ -1,73 +1,123 @@
 <template>
-    <div id="label-bar">
-        <van-tabs type="primary" sticky @click="handelTag">
-            <div v-for="(item, index) in tagLists" :key="index">
-                <van-tab :title="item.name"  :name="item.id">{{item.id}}</van-tab>
-            </div>
-        </van-tabs>
+  <div id="label-bar">
+    <div class="tag-box">
+      <div class="tag-item" v-for="(item, index) in showList" :key="index" @click="handelTagChange(item.id)">
+        <span :class="{ wordRoll: wordControl(item.name) }">{{ item.name }}</span>
+      </div>
     </div>
+    <div id="collaspe" @click="handleCollaspe">
+        <span v-if="!showMore"><van-icon name="arrow-down" /></span>
+        <span v-else><van-icon name="arrow-up" /></span>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-    data(){
-        return{
-            tagLists:[
-                {
-                    id: 1,
-                    name: '单纯吐槽'
-                },
-                {
-                    id: 2,
-                    name: '党办校办'
-                },
-                {
-                    id: 3,
-                    name: '组织部'
-                },
-                {
-                    id: 4,
-                    name: '宣传部'
-                },
-                {
-                    id: 5,
-                    name: '学工部'
-                },
-                {
-                    id: 6,
-                    name: '校工会'
-                }
-            ]
+  data() {
+    return {
+      currentTag: 0,
+      showMore: false,
+      showList: [],
+      tagList: [
+        {
+          id: 1,
+          name: '单纯吐槽'
+        },
+        {
+          id: 2,
+          name: '党办校办'
+        },
+        {
+          id: 3,
+          name: '组织部'
+        },
+        {
+          id: 4,
+          name: '宣传部'
+        },
+        {
+          id: 5,
+          name: '学工部'
+        },
+        {
+          id: 6,
+          name: '校工会'
+        },
+        {
+          id: 7,
+          name: '我是一个长长长长标签'
+        },
+        {
+          id: 8,
+          name: '我是一个长长长长标签'
         }
-    },
+      ]
+    }
+  },
 
-    methods:{
-        handelTag(name, title){
-            console.log("name", name)
-            console.log("title", title)
+  methods: {
+    handelTagChange(i) {
+      this.currentTag = i
+    },
+    handleCollaspe() {
+      this.showList = []
+      let tmp = this.showMore
+      this.showMore = !tmp
+      if (this.showMore) {
+        this.showList = this.tagList
+      } else {
+        for (let i = 0; i < 4; i++) {
+          this.showList.push(this.tagList[i])
         }
+      }
     },
-
-    created(){}
-    
+    wordControl(n) {
+      if (n.length > 4) {
+        return true
+      } else {
+        return false
+      }
+    }
+  },
+  created() {
+    for (let i = 0; i < 4; i++) {
+      this.showList.push(this.tagList[i])
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-    #label-bar /deep/ .van-tabs__wrap--scrollable .van-tabs__nav--complete{
-        height: 40px !important;
+.tag-box {
+  margin: 0 10px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  overflow: hidden;
+  .tag-item {
+    text-align: center;
+    font-size: 14px;
+    margin: 5px 10px;
+    overflow: hidden;
+    span {
+      display: inline-block;
+      width: 100%;
     }
-
-    #label-bar /deep/ .van-tabs__content{
-        display: none;
-    }
-
-    #label-bar /deep/ .van-tab{
-        background-color: gray;
-        color: #ffffff;
-        margin: 0 5px 0 5px;
-        border-radius: 5px;
-        font-weight: 500;
-        font-size: 16px;
-    }
+  }
+}
+#collaspe {
+  text-align: center;
+}
+.wordRoll {
+  white-space: nowrap;
+  animation: 4s wordsLoop linear infinite normal;
+}
+@keyframes wordsLoop {
+  0% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(-130%);
+  }
+}
 </style>
