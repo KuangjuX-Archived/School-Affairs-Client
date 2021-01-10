@@ -1,42 +1,40 @@
 <template>
-    <div class="bar1">
-        <div class="form">
-            <input
-                v-model="content"
-                type="text"
-                placeholder="请输入您要搜索的内容..."
-                name="content"
-            >
-            <button @click="search()" />
-        </div>
+  <div class="bar1">
+    <div class="form">
+      <input class="form-input" v-model="content" type="text" placeholder="请输入..." name="content" />
+      <button @click="search()" />
+    </div>
   </div>
 </template>
 
-
 <script>
 export default {
-    name: "SearchColumn",
-    data(){
-        return{
-            content: ""
-        }
-    },
-
-    methods:{
-        search(){
-            console.log(this.content)
-        }
+  name: 'SearchColumn',
+  data() {
+    return {
+      content: ''
     }
+  },
+
+  methods: {
+    search() {
+      console.log(this.content)
+    }
+  }
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
 .form {
   position: relative;
   height: 32px;
   padding: 0;
-  width: 50wh;
+  width: 50vw;
+  .form-input {
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+  }
 }
 
 input,
@@ -64,7 +62,7 @@ button {
   border: 1px solid #ffffff;
   border: 0;
   border-radius: 5px;
-  background: #3D5AFE;
+  background: #3d5afe;
   opacity: 0.5;
   color: black;
   line-height: 32px;
@@ -74,12 +72,12 @@ button {
   right: 0;
   border-radius: 0 5px 5px 0;
   outline: none;
-  background: #3D5AFE;
+  background: #3d5afe;
   opacity: 0.5;
 }
 .bar1 button::before {
   display: inline-block;
-  content: url("img/search.svg");
+  content: url('img/search.svg');
   margin-top: 8px;
 }
 ::-webkit-input-placeholder {
