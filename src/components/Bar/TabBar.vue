@@ -21,7 +21,7 @@ export default {
         return [
           {
             to: "/login",
-            icon: require('../assets/icon/home.svg'),
+            icon: require('assets/icon/home.svg'),
             title: '登录'
           },
         ]

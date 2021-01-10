@@ -18,7 +18,7 @@ export default {
     name: "SearchColumn",
     data(){
         return{
-            content: "",
+            content: ""
         }
     },
 

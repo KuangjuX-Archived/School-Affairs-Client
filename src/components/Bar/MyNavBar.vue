@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import SearchColumn from './SearchColumn.vue'
+import SearchColumn from 'components/SearchColumn.vue'
 export default {
     name: 'MyNavBar',
     data(){
